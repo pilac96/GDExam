@@ -10,13 +10,14 @@ import java.util.List;
 
 public class DataLoader {
 
-    public static List<Student> loadStudents(String pathToJsonData) {
+    public static List<Student> loadStudents(String pathToJsonData) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         List<Student> students = null;
         try {
-            students = mapper.readValue(new File(pathToJsonData), new TypeReference<List<Student>>(){});
+            students = mapper.readValue(new File(pathToJsonData), new TypeReference<List<Student>>() {
+            });
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new IOException("Error when tried to open file");
         }
         return students;
     }

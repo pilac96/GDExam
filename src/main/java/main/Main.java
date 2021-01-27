@@ -1,17 +1,15 @@
 package main;
 
-import handlers.DataLoader;
 import handlers.UserInputHandler;
 import models.Report;
-import models.Student;
-
-import java.util.List;
+import models.UserInput;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> students = DataLoader.loadStudents("src/main/resources/data/students.json");
+        UserInputHandler inputHandler = new UserInputHandler();
+        UserInput ui = inputHandler.tryGettingValidInput();
 
-        Report report = UserInputHandler.tryGettingValidInputAndReturnReport();
+        Report report = new Report(ui);
         report.generate();
     }
 }
