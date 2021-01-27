@@ -1,0 +1,39 @@
+[{
+    "name": "Ivanov Ivan",
+    "curriculum": "Java Developer",
+    "startDate": "1 June 2020 - Monday",
+    "courses": [
+      {
+        "courseName": "Java",
+        "duration": "16"
+      },
+      {
+        "courseName": "JDBC",
+        "duration": "24"
+      },
+      {
+        "courseName": "Spring",
+        "duration": "16"
+      }
+    ]
+  },
+  {
+    "name": "Sidorov Ivan",
+    "curriculum": "AQE",
+    "startDate": "1 June 2020 - Monday",
+    "courses": [
+      {
+        "courseName": "Test design",
+        "duration": "10"
+      },
+      {
+        "courseName": "Page Object",
+        "duration": "16"
+      },
+      {
+        "courseName": "Selenium",
+        "duration": "16"
+      }
+    ]
+  }
+]
